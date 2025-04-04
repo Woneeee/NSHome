@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+export const point = {};
+
 export const GlobalStyled = createGlobalStyle`
     ${reset}
 
@@ -9,6 +11,12 @@ export const GlobalStyled = createGlobalStyle`
         
     }
 
+    body{
+        color: rgb(51, 51, 51)
+        ;
+        font-family: "Noto Sans KR", sans-serif;
+        /* word-break: keep-all; */
+    }
 
     li{
         list-style: none;
@@ -20,8 +28,8 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     a{
-        text-decoration: noen;
-        
+        color: rgb(51, 51, 51);
+        text-decoration: none;
     }
 
 `;
