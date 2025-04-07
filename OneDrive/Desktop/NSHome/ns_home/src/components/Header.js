@@ -31,6 +31,7 @@ const Menu = styled.ul`
   background-color: skyblue;
   display: flex;
   align-items: center;
+  color: rgb(255, 255, 255);
   li {
     /* background-color: beige; */
     font-size: 20px;
@@ -40,7 +41,9 @@ const Menu = styled.ul`
   li:nth-child(4) {
     margin: 0;
   }
-  // li:nth-child 쓰는 위치가 부모 요소 바로 밑에서 써야함
+  a {
+    color: rgb(255, 255, 255);
+  }
 
   .dropdown {
     position: absolute;
@@ -70,12 +73,16 @@ const MenuIcon = styled.div`
 
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null); // 활성화된 메뉴 상태 관리
+  const [activeIcon, setActiveIcon] = useState(false);
 
   const mouseEnterHandler = (menu) => {
     setActiveMenu(menu);
   };
   const mouseLeaveHandler = () => {
     setActiveMenu(null);
+  };
+  const clickHandler = () => {
+    setActiveIcon((prev) => !prev);
   };
 
   return (
@@ -91,7 +98,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("aboutus")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link>ABOUT US</Link>
+          <Link to={"/company"}>ABOUT US</Link>
           {activeMenu === "aboutus" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>회사소개</li>
@@ -144,10 +151,8 @@ export const Header = () => {
         </li>
       </Menu>
 
-      <MenuIcon>
-        <Link>
-          <RiMenu3Fill />
-        </Link>
+      <MenuIcon onClick={clickHandler}>
+        <RiMenu3Fill />
       </MenuIcon>
     </SHeader>
   );
