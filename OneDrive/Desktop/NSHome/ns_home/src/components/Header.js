@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../img/logo.svg";
-import { RiMenu3Fill, RiMenuFold3Fill } from "react-icons/ri";
+import { RiMenu3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -11,10 +11,13 @@ const SHeader = styled.header`
   padding: 10px 100px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 `;
 
 const Logo = styled.div`
-  /* width: 10%; */ //억지로 크기를 늘리면 깨짐 (가로크기는 웬만하면 자식에서 정하기)
   height: 100%;
   background-color: aliceblue;
   img {
@@ -29,9 +32,10 @@ const Menu = styled.ul`
   display: flex;
   align-items: center;
   li {
+    /* background-color: beige; */
     font-size: 20px;
     font-weight: 500;
-    margin-right: 70px;
+    margin-right: 75px;
   }
   li:nth-child(4) {
     margin: 0;
@@ -40,16 +44,16 @@ const Menu = styled.ul`
 
   .dropdown {
     position: absolute;
-    width: 200px;
+    width: 220px;
     background-color: burlywood;
     margin-top: 20px;
+    border-radius: 10px;
     li {
       font-size: 19px;
-      margin-bottom: 30px;
-      margin-left: 15px;
-    }
-    li:last-child {
-      margin-bottom: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
     }
   }
 `;
@@ -77,17 +81,19 @@ export const Header = () => {
   return (
     <SHeader>
       <Logo>
-        <img src={logo} alt="logo" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo" />
+        </Link>
       </Logo>
 
       <Menu>
         <li
           onMouseEnter={() => mouseEnterHandler("aboutus")}
-          onMouseLeave={mouseLeaveHandler}
+          // onMouseLeave={mouseLeaveHandler}
         >
           <Link>ABOUT US</Link>
           {activeMenu === "aboutus" && (
-            <ul className="dropdown">
+            <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>회사소개</li>
               <li>VISION</li>
               <li>핵심가치</li>
@@ -96,19 +102,52 @@ export const Header = () => {
             </ul>
           )}
         </li>
-        <li>
+        <li
+          onMouseEnter={() => mouseEnterHandler("business")}
+          // onMouseLeave={mouseLeaveHandler}
+        >
           <Link>BUSINESS</Link>
+          {activeMenu === "business" && (
+            <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
+              <li>소프트웨어 개발</li>
+              <li>인프라 구축</li>
+              <li>정부지원사업</li>
+            </ul>
+          )}
         </li>
-        <li>
+        <li
+          onMouseEnter={() => mouseEnterHandler("solutions")}
+          // onMouseLeave={mouseLeaveHandler}
+        >
           <Link>SOLUTIONS</Link>
+          {activeMenu === "solutions" && (
+            <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
+              <li>통합제어</li>
+              <li>모니터링</li>
+              <li>구축 효과</li>
+              <li>적용 사례</li>
+            </ul>
+          )}
         </li>
-        <li>
+        <li
+          onMouseEnter={() => mouseEnterHandler("notice")}
+          // onMouseLeave={mouseLeaveHandler}
+        >
           <Link>NOTICE</Link>
+          {activeMenu === "notice" && (
+            <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
+              <li>회사소식</li>
+              <li>도입문의</li>
+              <li>공지사항</li>
+            </ul>
+          )}
         </li>
       </Menu>
 
       <MenuIcon>
-        <RiMenu3Fill />
+        <Link>
+          <RiMenu3Fill />
+        </Link>
       </MenuIcon>
     </SHeader>
   );
