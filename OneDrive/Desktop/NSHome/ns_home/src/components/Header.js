@@ -3,23 +3,25 @@ import logo from "../img/logo.svg";
 import { RiMenu3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import bg from "../img/main4.jpeg";
 
 const SHeader = styled.header`
   width: 100%;
-  height: 80px;
-  background-color: pink;
-  padding: 10px 100px;
+  padding: 25px 120px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
+  border-bottom: 1px solid #99999940;
 `;
 
 const Logo = styled.div`
+  width: 80px;
   height: 100%;
-  background-color: aliceblue;
   img {
     height: 100%;
     object-fit: cover;
@@ -28,15 +30,14 @@ const Logo = styled.div`
 
 const Menu = styled.ul`
   height: 100%;
-  background-color: skyblue;
   display: flex;
   align-items: center;
   color: rgb(255, 255, 255);
   li {
-    /* background-color: beige; */
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    margin-right: 75px;
+    margin-right: 80px;
+    letter-spacing: -0.5px;
   }
   li:nth-child(4) {
     margin: 0;
@@ -47,23 +48,28 @@ const Menu = styled.ul`
 
   .dropdown {
     position: absolute;
-    width: 220px;
-    background-color: burlywood;
-    margin-top: 20px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 43px;
     border-radius: 10px;
     li {
-      font-size: 19px;
+      font-size: 17px;
       width: 100%;
       height: 60px;
       display: flex;
       align-items: center;
+      margin-left: 10px;
+    }
+    a {
+      color: rgb(51, 51, 51);
     }
   }
 `;
 
 const MenuIcon = styled.div`
   height: 100%;
-  background-color: lightcoral;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
   svg {
     width: 100%;
     height: 100%;
@@ -71,9 +77,37 @@ const MenuIcon = styled.div`
   }
 `;
 
+const Modal = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: lavender;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: ${(props) => props.$active};
+`;
+
+const Bg = styled.div`
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const Close = styled.div`
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  svg {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+  }
+`;
+
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null); // 활성화된 메뉴 상태 관리
-  const [activeIcon, setActiveIcon] = useState(false);
+  const [activeModal, setActiveModal] = useState(false);
 
   const mouseEnterHandler = (menu) => {
     setActiveMenu(menu);
@@ -82,7 +116,10 @@ export const Header = () => {
     setActiveMenu(null);
   };
   const clickHandler = () => {
-    setActiveIcon((prev) => !prev);
+    setActiveModal(true);
+  };
+  const closeHandler = () => {
+    setActiveModal(false);
   };
 
   return (
@@ -101,11 +138,21 @@ export const Header = () => {
           <Link to={"/company"}>ABOUT US</Link>
           {activeMenu === "aboutus" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
-              <li>회사소개</li>
-              <li>VISION</li>
-              <li>핵심가치</li>
-              <li>연혁</li>
-              <li>인증</li>
+              <li>
+                <Link to={"/company"}>회사소개</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>VISION</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>핵심가치</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>연혁</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>인증</Link>
+              </li>
             </ul>
           )}
         </li>
@@ -116,9 +163,15 @@ export const Header = () => {
           <Link>BUSINESS</Link>
           {activeMenu === "business" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
-              <li>소프트웨어 개발</li>
-              <li>인프라 구축</li>
-              <li>정부지원사업</li>
+              <li>
+                <Link to={"/company"}>소프트웨어 개발</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>인프라 구축</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>정부지원사업</Link>
+              </li>
             </ul>
           )}
         </li>
@@ -129,10 +182,18 @@ export const Header = () => {
           <Link>SOLUTIONS</Link>
           {activeMenu === "solutions" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
-              <li>통합제어</li>
-              <li>모니터링</li>
-              <li>구축 효과</li>
-              <li>적용 사례</li>
+              <li>
+                <Link to={"/company"}>통합제어</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>모니터링</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>구축 효과</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>적용 사례</Link>
+              </li>
             </ul>
           )}
         </li>
@@ -143,17 +204,33 @@ export const Header = () => {
           <Link>NOTICE</Link>
           {activeMenu === "notice" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
-              <li>회사소식</li>
-              <li>도입문의</li>
-              <li>공지사항</li>
+              <li>
+                <Link to={"/company"}>회사소식</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>도입문의</Link>
+              </li>
+              <li>
+                <Link to={"/company"}>공지사항</Link>
+              </li>
             </ul>
           )}
         </li>
       </Menu>
 
-      <MenuIcon onClick={clickHandler}>
-        <RiMenu3Fill />
+      <MenuIcon>
+        <RiMenu3Fill onClick={clickHandler} />
       </MenuIcon>
+
+      <Modal $active={activeModal ? "visible" : "hidden"}>
+        <Bg>
+          <img src={bg} alt="menuBg" />
+        </Bg>
+
+        <Close onClick={closeHandler}>
+          <IoClose />
+        </Close>
+      </Modal>
     </SHeader>
   );
 };

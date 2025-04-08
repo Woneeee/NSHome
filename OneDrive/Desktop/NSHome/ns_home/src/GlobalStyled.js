@@ -15,7 +15,7 @@ export const GlobalStyled = createGlobalStyle`
         color: rgb(51, 51, 51)
         ;
         font-family: "Noto Sans KR", sans-serif;
-        /* word-break: keep-all; */
+        word-break: keep-all;
     }
 
     li{

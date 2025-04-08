@@ -1,38 +1,63 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import main from "../../../img/main2.jpeg";
-import { useEffect, useState } from "react";
 
-const Container = styled.section`
-  width: 100%;
-  height: 100vh;
-  img {
-    height: 100%;
-    object-fit: cover;
+const fadeInAndScale = keyframes`
+  0% {
     opacity: 0.8;
     transform: scale(1.2);
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
   }
-
-  img.active {
-    opacity: 1; /* 이미지가 서서히 나타남 */
+  100% {
+    opacity: 1;
     transform: scale(1);
   }
 `;
 
+const Container = styled.section`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  img {
+    height: 100%;
+    object-fit: cover;
+
+    animation: ${fadeInAndScale} 2s ease-in-out;
+  }
+`;
+
+const Text = styled.div`
+  position: absolute;
+  top: 37%;
+  left: 120px;
+  letter-spacing: -1px;
+  h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 73px;
+  }
+  p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 60px;
+    font-weight: 500;
+  }
+
+  animation: ${fadeInAndScale} 2s ease-in-out;
+`;
+
 export const MainBanner = () => {
-  const [activeMain, setActiveMain] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setActiveMain(true); // 2초 후 페이드 인 시작
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Container>
-      <img className={activeMain ? "active" : ""} src={main} alt="main" />
+      <img src={main} alt="main" />
+
+      <Text>
+        <h2>에너지 효율화를 통해</h2>
+        <h2>미래를 선도하는 기업</h2>
+        <p>
+          엔에스솔루션에서는 독자적인 솔루션으로 산업현장의 획기적인 변화를
+          선도합니다.
+        </p>
+      </Text>
     </Container>
   );
 };
