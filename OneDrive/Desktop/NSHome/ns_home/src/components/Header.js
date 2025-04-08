@@ -54,6 +54,7 @@ const Menu = styled.ul`
     border-radius: 10px;
     li {
       font-size: 17px;
+
       width: 100%;
       height: 60px;
       display: flex;
@@ -142,7 +143,7 @@ export const Header = () => {
                 <Link to={"/company"}>회사소개</Link>
               </li>
               <li>
-                <Link to={"/company"}>VISION</Link>
+                <Link to={"/vision"}>VISION</Link>
               </li>
               <li>
                 <Link to={"/company"}>핵심가치</Link>

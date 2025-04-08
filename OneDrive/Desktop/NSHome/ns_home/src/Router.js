@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Home } from "./pages/home/Home";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Company } from "./pages/about/Company";
+import { Vision } from "./pages/about/Vision";
 
 const Router = () => {
   return (
@@ -13,6 +14,7 @@ const Router = () => {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.company} element={<Company />} />
+        <Route path={routes.vision} element={<Vision />}></Route>
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
