@@ -8,7 +8,7 @@ import { Company } from "./pages/about/Company";
 import { Vision } from "./pages/about/Vision";
 import { KeyValue } from "./pages/about/KeyValue";
 import { History } from "./pages/about/History";
-import { Certi } from "./pages/about/Certi";
+import { Business } from "./pages/business/Business";
 
 const Router = () => {
   return (
@@ -20,7 +20,7 @@ const Router = () => {
         <Route path={routes.vision} element={<Vision />}></Route>
         <Route path={routes.keyvalue} element={<KeyValue />}></Route>
         <Route path={routes.history} element={<History />}></Route>
-        <Route path={routes.certi} element={<Certi />}></Route>
+        <Route path={routes.business} element={<Business />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
