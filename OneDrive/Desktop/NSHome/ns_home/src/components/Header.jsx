@@ -39,7 +39,7 @@ const Menu = styled.ul`
     margin-right: 80px;
     letter-spacing: -0.5px;
   }
-  li:nth-child(4) {
+  li:nth-child(5) {
     margin: 0;
   }
   a {
@@ -196,20 +196,29 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("solutions")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome}>SOLUTIONS</Link>
+          <Link $home={isHome} to={"/nixpack"}>
+            SOLUTIONS
+          </Link>
           {activeMenu === "solutions" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/company"}>통합제어</Link>
+                <Link to={"/nixpack"}>모니터링</Link>
               </li>
               <li>
-                <Link to={"/company"}>모니터링</Link>
+                <Link to={"/compressor"}>통합제어</Link>
               </li>
+            </ul>
+          )}
+        </li>
+        <li
+          onMouseEnter={() => mouseEnterHandler("cases")}
+          // onMouseLeave={mouseLeaveHandler}
+        >
+          <Link $home={isHome}>CASES</Link>
+          {activeMenu === "cases" && (
+            <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/company"}>구축 효과</Link>
-              </li>
-              <li>
-                <Link to={"/company"}>적용 사례</Link>
+                <Link to={"/company"}>적용사례</Link>
               </li>
             </ul>
           )}

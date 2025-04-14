@@ -43,6 +43,35 @@ const SoftText = styled.div`
   }
 `;
 
+const GovernIntro = styled.section`
+  max-width: 1140px;
+  width: 100%;
+  margin: 120px auto;
+  /* margin-top: 120px; */
+  /* background-color: lavender; */
+  h2 {
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  span {
+    margin-top: 50px;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    opacity: 0.8;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 25px;
+    opacity: 0.8;
+    letter-spacing: -1px;
+  }
+`;
+
 export const Government = () => {
   return (
     <Container>
@@ -106,6 +135,31 @@ export const Government = () => {
           </SoftText>
         </SwiperSlide>
       </Swiper>
+
+      <GovernIntro>
+        <h2>정부지원사업</h2>
+        <span>
+          엔에스솔루션은 정부가 추진하는 스마트팩토리 구축 및 에너지 효율화 지원
+          사업에서 전문 컨설팅과 기술 지원을 제공합니다.
+        </span>
+        <p>
+          중소기업이 스마트팩토리를 도입하는 과정에서 필요한 자금 지원,
+          기술개발, 그리고 운영 컨설팅까지 전방위적인 서비스를 제공합니다.
+        </p>
+        <span>특징 및 기대효과 </span>
+        <p>
+          • 맞춤형 지원: 기업 규모와 환경에 맞는 스마트팩토리 구축 솔루션 제공
+        </p>
+        <p>
+          • 재정 부담 완화: 정부의 자금 지원 프로그램 활용으로 초기 투자 비용
+          절감
+        </p>
+        <p>
+          • 디지털 전환 가속화: IoT, 빅데이터 등 최신 기술 도입으로 제조업의
+          디지털 전환 지원
+        </p>
+        <p>• 경쟁력 강화: 생산성 향상과 품질개선으로 시장 경쟁력 확보</p>
+      </GovernIntro>
     </Container>
   );
 };

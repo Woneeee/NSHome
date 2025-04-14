@@ -11,6 +11,8 @@ import { History } from "./pages/about/History";
 import { Software } from "./pages/business/Software";
 import { Infra } from "./pages/business/Infra";
 import { Government } from "./pages/business/Government";
+import { Nixpack } from "./pages/solution/Nixpack";
+import { Compressor } from "./pages/solution/Compressor";
 
 const Router = () => {
   return (
@@ -25,6 +27,8 @@ const Router = () => {
         <Route path={routes.software} element={<Software />} />
         <Route path={routes.infra} element={<Infra />} />
         <Route path={routes.government} element={<Government />} />
+        <Route path={routes.compressor} element={<Compressor />}></Route>
+        <Route path={routes.nixpack} element={<Nixpack />}></Route>
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />

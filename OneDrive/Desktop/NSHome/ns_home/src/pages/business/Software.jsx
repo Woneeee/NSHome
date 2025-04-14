@@ -55,6 +55,7 @@ export const Software = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
+        initialSlide={0}
       >
         <SwiperSlide>
           <ImgBox>

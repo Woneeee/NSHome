@@ -46,21 +46,23 @@ const SoftText = styled.div`
   }
 `;
 
-const InfraIntro = styled.div`
+const InfraIntro = styled.section`
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
   margin-top: 120px;
   /* background-color: lavender; */
   h2 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 500;
     text-align: center;
     letter-spacing: -1px;
   }
   p {
     font-size: 20px;
-    margin-top: 4dvh;
+    margin-top: 50px;
+    opacity: 0.9;
+    letter-spacing: -1px;
   }
 `;
 
