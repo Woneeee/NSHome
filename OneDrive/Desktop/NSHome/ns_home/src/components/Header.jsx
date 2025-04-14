@@ -175,19 +175,19 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("business")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome} to={"/business/1"}>
+          <Link $home={isHome} to={"/software"}>
             BUSINESS
           </Link>
           {activeMenu === "business" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/business/1"}>소프트웨어 개발</Link>
+                <Link to={"/software"}>소프트웨어 개발</Link>
               </li>
               <li>
-                <Link to={"/business/2"}>인프라 구축</Link>
+                <Link to={"/infra"}>인프라 구축</Link>
               </li>
               <li>
-                <Link to={"/business/3"}>정부지원사업</Link>
+                <Link to={"/government"}>정부지원사업</Link>
               </li>
             </ul>
           )}

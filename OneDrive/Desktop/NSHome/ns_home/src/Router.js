@@ -8,7 +8,9 @@ import { Company } from "./pages/about/Company";
 import { Vision } from "./pages/about/Vision";
 import { KeyValue } from "./pages/about/KeyValue";
 import { History } from "./pages/about/History";
-import { Business } from "./pages/business/Business";
+import { Software } from "./pages/business/Software";
+import { Infra } from "./pages/business/Infra";
+import { Government } from "./pages/business/Government";
 
 const Router = () => {
   return (
@@ -20,7 +22,9 @@ const Router = () => {
         <Route path={routes.vision} element={<Vision />}></Route>
         <Route path={routes.keyvalue} element={<KeyValue />}></Route>
         <Route path={routes.history} element={<History />}></Route>
-        <Route path={routes.business} element={<Business />} />
+        <Route path={routes.software} element={<Software />} />
+        <Route path={routes.infra} element={<Infra />} />
+        <Route path={routes.government} element={<Government />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />

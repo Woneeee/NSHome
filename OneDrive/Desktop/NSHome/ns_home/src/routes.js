@@ -4,5 +4,7 @@ export const routes = {
   vision: "/vision",
   keyvalue: "/keyvalue",
   history: "/history",
-  business: "/business/:id",
+  software: "/software",
+  infra: "/infra",
+  government: "/government",
 };
