@@ -202,10 +202,13 @@ export const Header = () => {
           {activeMenu === "solutions" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/nixpack"}>모니터링</Link>
+                <Link to={"/nixpack"}>에너지통합모니터링시스템</Link>
               </li>
               <li>
-                <Link to={"/compressor"}>통합제어</Link>
+                <Link to={"/compressor"}>공기압축기통합제어시스템</Link>
+              </li>
+              <li>
+                <Link to={"/smartfactory"}>스마트팩토리구축지원</Link>
               </li>
             </ul>
           )}

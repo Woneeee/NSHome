@@ -7,6 +7,7 @@ export const routes = {
   software: "/software",
   infra: "/infra",
   government: "/government",
-  compressor: "/compressor",
   nixpack: "/nixpack",
+  compressor: "/compressor",
+  smartfactory: "/smartfactory",
 };

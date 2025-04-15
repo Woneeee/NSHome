@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import nixpack_bg from "../../img/nixpack_bg.jpeg";
-import compressor from "../../img/compressor.png";
+import program_img from "../../img/program_img.png";
 import { useState } from "react";
 
 const Container = styled.section`
@@ -150,7 +150,7 @@ const EffectDescription = styled.div`
   display: ${({ $open }) => ($open ? "block" : "none")};
 `;
 
-export const Compressor = () => {
+export const SmartFactory = () => {
   const [openIndex, setOpenIndex] = useState(null); // 현재 열린 index 추적
 
   const toggleHandler = (index) => {
@@ -159,38 +159,38 @@ export const Compressor = () => {
 
   const effects = [
     {
-      title: "비용 절감 극대화",
-      desc: "압축기의 용량과 운전 상태를 최적으로 제어하여 에너지 절감을 실현",
+      title: "데이터 기반 의사결정",
+      desc: "생산량과 에너지 소비 데이터를 연동해 최적의 운영 방안을 도출",
     },
     {
-      title: "원가 절감",
-      desc: "전력 소모 감소와 유지보수 계획 수립으로 운영 비용을 낮춤",
+      title: "생산성 향상",
+      desc: "최신 기술 적용으로 기업의 디지털 전환과 시장 경쟁력을 높임",
     },
     {
-      title: "운영 효율성 ",
-      desc: "압축공기 사용 패턴 분석 및 자동화된 제어로 공정 개선 및 불량률 감소",
+      title: "지속 가능성 강화",
+      desc: "스마트팩토리 구축 관련 정부 지원 사업 참여를 통해 비용 부담 완화",
     },
   ];
 
   return (
     <Container>
       <Banner>
-        <h1>공기압축기통합제어시스템</h1>
+        <h1>스마트팩토리구축지원</h1>
 
         <CaseBtn>고객사례 확인하기</CaseBtn>
       </Banner>
 
       <NixIntro>
         <NixImg>
-          <img src={compressor} alt="모니터링프로그램이미지" />
+          <img src={program_img} alt="모니터링프로그램이미지" />
         </NixImg>
 
         <NixDesc>
           <p>
-            공기압축기 통합 제어 솔루션은 다수의 압축공기를 사용하는 설비를
-            실시간으로 모니터링하여, 최적의 운전 상태로 가동 및 제어하는
-            시스템입니다. 이를 통해 불필요한 압축기 가동을 줄이고, 에너지
-            소모량을 개선합니다.
+            스마트팩토리 구축은 IoT, 빅데이터, 5G 기술을 활용하여 공장의
+            생산성과 에너지 효율성을 극대화하는 솔루션입니다. 엔에스솔루션은
+            FEMS와 같은 지능형 시스템을 통해 스마트팩토리 환경 조성을
+            지원합니다.
           </p>
         </NixDesc>
       </NixIntro>
