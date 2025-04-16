@@ -2,7 +2,7 @@ export const case1 = [
   {
     company: "동은단조 밀양공장",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/dongeun.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -11,7 +11,7 @@ export const case1 = [
   {
     company: "영엽",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/youngyup.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -20,7 +20,7 @@ export const case1 = [
   {
     company: "태안오토텍",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/tean.avif",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -29,7 +29,7 @@ export const case1 = [
   {
     company: "면사랑",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/meonsarang.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -38,7 +38,7 @@ export const case1 = [
   {
     company: "넥센타이어_양산",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/nexen_yangsan.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -47,7 +47,7 @@ export const case1 = [
   {
     company: "영흥",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/youngheong.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -56,7 +56,7 @@ export const case1 = [
   {
     company: "동화정밀",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/dongwha.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -65,7 +65,7 @@ export const case1 = [
   {
     company: "정암산업",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/joengam.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -74,7 +74,7 @@ export const case1 = [
   {
     company: "조광요턴",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/jogwang.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -83,7 +83,7 @@ export const case1 = [
   {
     company: "동양철관",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/dongyangchul.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -92,7 +92,7 @@ export const case1 = [
   {
     company: "파인트리포스마그네슘",
     year: ~2022,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/pinetree.png",
     id: "",
     bs_title: "FEMS",
     bs_info: "~2022FEMS",
@@ -101,7 +101,7 @@ export const case1 = [
   {
     company: "(주)동양",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/dongyang.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -110,7 +110,7 @@ export const case1 = [
   {
     company: "(주)에스앤더블유",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/s&w.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -119,7 +119,7 @@ export const case1 = [
   {
     company: "(주)신흥오토모티브",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/sinheongauto.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -128,7 +128,7 @@ export const case1 = [
   {
     company: "(주)신흥SEC",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/sinheongsec.png",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -137,7 +137,7 @@ export const case1 = [
   {
     company: "(주)삼화제지",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/samwha.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -146,7 +146,7 @@ export const case1 = [
   {
     company: "(주)건화공업",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/gunwha.jpg",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -155,7 +155,7 @@ export const case1 = [
   {
     company: "(주)디엠산업",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/dm.jfif",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",
@@ -164,7 +164,7 @@ export const case1 = [
   {
     company: "(주)서연이화",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/seoyeon.jfif",
     id: "",
     bs_title: "FEMS",
     bs_info: "2023FEMS",

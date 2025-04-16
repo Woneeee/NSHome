@@ -2,7 +2,7 @@ export const case2 = [
   {
     company: "오뚜기_삼남공장",
     year: 2023,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/oddugi.jpg",
     id: "",
     bs_title: "EnMS",
     bs_info: "2023EnMS",
@@ -11,7 +11,7 @@ export const case2 = [
   {
     company: "한국로스트왁스",
     year: 2024,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/lostwacs.jpg",
     id: "",
     bs_title: "EnMS",
     bs_info: "2024EnMS",
@@ -20,7 +20,7 @@ export const case2 = [
   {
     company: "렉셈",
     year: 2024,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/recsem.jpg",
     id: "",
     bs_title: "EnMS",
     bs_info: "2024EnMS",
@@ -29,7 +29,7 @@ export const case2 = [
   {
     company: "폴",
     year: 2024,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/pole.jpg",
     id: "",
     bs_title: "EnMS",
     bs_info: "2024EnMS",
@@ -38,7 +38,7 @@ export const case2 = [
   {
     company: "넥센타이어_창녕",
     year: 2024,
-    img_url: "/asset/img/.png",
+    img_url: "/asset/img/nexen_changyoung.jpg",
     id: "",
     bs_title: "EnMS",
     bs_info: "2024EnMS",
