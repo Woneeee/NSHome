@@ -31,7 +31,6 @@ const Router = () => {
         <Route path={routes.nixpack} element={<Nixpack />}></Route>
         <Route path={routes.compressor} element={<Compressor />}></Route>
         <Route path={routes.smartfactory} element={<SmartFactory />}></Route>
-        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
