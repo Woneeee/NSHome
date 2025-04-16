@@ -53,6 +53,7 @@ const NixImg = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
 `;
 
@@ -182,7 +183,7 @@ export const Compressor = () => {
 
       <NixIntro>
         <NixImg>
-          <img src={compressor} alt="모니터링프로그램이미지" />
+          <img src={compressor} alt="공기압축기이미지" />
         </NixImg>
 
         <NixDesc>

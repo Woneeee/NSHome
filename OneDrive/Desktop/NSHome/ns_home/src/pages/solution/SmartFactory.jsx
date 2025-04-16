@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import nixpack_bg from "../../img/nixpack_bg.jpeg";
-import program_img from "../../img/program_img.png";
 import { useState } from "react";
+import smartfactory from "../../img/smartfactory.jpeg";
 
 const Container = styled.section`
   width: 100%;
@@ -53,6 +53,7 @@ const NixImg = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
 `;
 
@@ -182,7 +183,7 @@ export const SmartFactory = () => {
 
       <NixIntro>
         <NixImg>
-          <img src={program_img} alt="모니터링프로그램이미지" />
+          <img src={smartfactory} alt="스마트팩토리이미지" />
         </NixImg>
 
         <NixDesc>
