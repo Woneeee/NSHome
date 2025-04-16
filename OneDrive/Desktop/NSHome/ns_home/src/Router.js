@@ -3,7 +3,6 @@ import { routes } from "./routes";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/home/Home";
-import { PageNotFound } from "./pages/PageNotFound";
 import { Company } from "./pages/about/Company";
 import { Vision } from "./pages/about/Vision";
 import { KeyValue } from "./pages/about/KeyValue";
@@ -14,6 +13,7 @@ import { Government } from "./pages/business/Government";
 import { Nixpack } from "./pages/solution/Nixpack";
 import { Compressor } from "./pages/solution/Compressor";
 import { SmartFactory } from "./pages/solution/SmartFactory";
+import { Case } from "./pages/case/Case";
 
 const Router = () => {
   return (
@@ -31,6 +31,7 @@ const Router = () => {
         <Route path={routes.nixpack} element={<Nixpack />}></Route>
         <Route path={routes.compressor} element={<Compressor />}></Route>
         <Route path={routes.smartfactory} element={<SmartFactory />}></Route>
+        <Route path={routes.case} element={<Case />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
