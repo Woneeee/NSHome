@@ -83,7 +83,7 @@ const HisCon = styled.div`
 const Year = styled.div`
   font-size: 60px;
   font-weight: 500;
-  color: #2525a0;
+  color: #0a0a539b;
   width: 160px;
   /* background-color: pink; */
   line-height: 70px;
@@ -179,8 +179,8 @@ export const History = () => {
           </h2>
 
           <Menu
-            $hiscolor={hisOn ? "beige" : "white"}
-            $cercolor={cerOn ? "beige" : "white"}
+            $hiscolor={hisOn ? "#fef6f9" : "white"}
+            $cercolor={cerOn ? "#fef6f9" : "white"}
           >
             <li onClick={hisHandler}>연혁</li>
             <li onClick={cerHandler}>인증</li>

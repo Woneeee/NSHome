@@ -18,11 +18,19 @@ const Bg = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
   h1 {
     font-size: 55px;
     font-weight: 500;
     letter-spacing: -1px;
   }
+`;
+
+const ImgBg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e217;
 `;
 
 const NavWrapper = styled.nav`
@@ -41,7 +49,7 @@ const NavItem = styled.div`
   text-align: center;
   cursor: pointer;
   border-bottom: ${(props) =>
-    props.$active ? "2px solid black" : "2px solid transparent"};
+    props.$active ? "2px solid #0a0a539b" : "2px solid transparent"};
   transition: border-bottom 0.2s ease;
 `;
 
@@ -88,7 +96,7 @@ const ImgBox = styled.div`
 `;
 
 const ComIntro = styled.div`
-  background-color: #ddecf9;
+  background-color: #fef6f9;
   padding: 15px 10px;
   border-radius: 0 0 15px 15px;
   letter-spacing: -1px;
@@ -124,6 +132,7 @@ export const Case = () => {
   return (
     <Container>
       <Bg>
+        <ImgBg />
         <h1>고객 사례</h1>
       </Bg>
 

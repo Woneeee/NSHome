@@ -22,6 +22,13 @@ const ImgBox = styled.div`
   height: 100%;
 `;
 
+const Bg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #18181873;
+`;
+
 const SoftText = styled.div`
   position: absolute;
   color: #fff;
@@ -63,6 +70,7 @@ export const Software = () => {
               <img src={software} alt="소프트웨어 개발 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>SOFTWARE DEVELOPMENT</h2>
@@ -79,6 +87,7 @@ export const Software = () => {
               <img src={infra} alt="인프라 구축 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>INFRA DEVELOPMENT</h2>
@@ -95,6 +104,7 @@ export const Software = () => {
               <img src={government} alt="정부지원사업 진행 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>GOVERNMENT SUPPORT PROGRAM</h2>

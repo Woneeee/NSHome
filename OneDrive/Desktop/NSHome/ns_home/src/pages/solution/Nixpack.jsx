@@ -21,8 +21,9 @@ const Banner = styled.section`
   align-items: center;
   letter-spacing: -1px;
   h1 {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: -1px;
     color: #fff;
   }
 `;
@@ -30,7 +31,7 @@ const Banner = styled.section`
 const CaseBtn = styled.button`
   padding: 12px 35px;
   background-color: #fff;
-  margin-top: 50px;
+  margin-top: 30px;
   border-radius: 5px;
   transition-duration: 0.8s;
 

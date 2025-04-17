@@ -25,6 +25,13 @@ const ImgBox = styled.div`
   height: 100%;
 `;
 
+const Bg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #18181873;
+`;
+
 const SoftText = styled.div`
   position: absolute;
   color: #fff;
@@ -92,7 +99,7 @@ const Img = styled.div`
 
 const Text = styled.div`
   height: 100px;
-  background-color: #fff1f6;
+  background-color: #fef6f9;
   border-radius: 0 0 30px 30px;
   display: flex;
   justify-content: center;
@@ -127,6 +134,7 @@ export const Infra = () => {
               <img src={software} alt="소프트웨어 개발 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>SOFTWARE DEVELOPMENT</h2>
@@ -143,6 +151,7 @@ export const Infra = () => {
               <img src={infra} alt="인프라 구축 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>INFRA DEVELOPMENT</h2>
@@ -159,6 +168,7 @@ export const Infra = () => {
               <img src={government} alt="정부지원사업 진행 이미지" />
             </Link>
           </ImgBox>
+          <Bg />
 
           <SoftText>
             <h2>GOVERNMENT SUPPORT PROGRAM</h2>
