@@ -10,5 +10,5 @@ export const routes = {
   nixpack: "/nixpack",
   compressor: "/compressor",
   smartfactory: "/smartfactory",
-  case: "/case",
+  case: "/case/:id",
 };
