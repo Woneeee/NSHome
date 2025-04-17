@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import factory from "../../img/factory.jpeg";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { case1 } from "../../config/case/case1";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { case1, case2, case3, case4 } from "../../config/case/case";
 
 const Container = styled.section`
   width: 100%;
@@ -54,6 +54,7 @@ const FemsContainer = styled.section`
     font-size: 35px;
     font-weight: 500;
     letter-spacing: -1px;
+    margin-top: 120px;
   }
 `;
 
@@ -64,27 +65,61 @@ const Company = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
   row-gap: 60px;
+  margin-top: 50px;
   li {
-    height: 300px;
     border-radius: 15px;
-    background-color: lavender;
+    /* background-color: lavender; */
+    transition-duration: 0.2s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 
 const ImgBox = styled.div`
+  height: 250px;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px 15px 0 0;
   }
 `;
 
-const ComIntro = styled.div``;
+const ComIntro = styled.div`
+  background-color: #ddecf9;
+  padding: 15px 10px;
+  border-radius: 0 0 15px 15px;
+  letter-spacing: -1px;
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  p {
+    margin-top: 10px;
+    line-height: 15px;
+    opacity: 0.8;
+  }
+`;
 
 export const Case = () => {
-  const navItems = ["FEMS", "ENMS", "공기압축기", "스마트생태공장"];
+  const navItems = [
+    "FEMS",
+    "EnMS",
+    "공기압축기통합제어시스템",
+    "스마트생태공장",
+  ];
   const [activeItem, setActiveItem] = useState("FEMS");
-  console.log(case1);
+
+  const allCases = [...case1, ...case2, ...case3, ...case4];
+
+  const filteredCases = allCases.filter((item) => item.bs_title === activeItem);
+
+  const year_2022 = filteredCases.filter((item) => item.year === "~2022");
+  const year_2023 = filteredCases.filter((item) => item.year === 2023);
+  const year_2024 = filteredCases.filter((item) => item.year === 2024);
+  const year_2025 = filteredCases.filter((item) => item.year === 2025);
 
   return (
     <Container>
@@ -105,28 +140,101 @@ export const Case = () => {
       </NavWrapper>
 
       <FemsContainer>
-        <h2>~2022</h2>
+        <h2>~2022년</h2>
 
-        <Company>
-          {case1.map((case1) => (
-            <li>
-              <ImgBox>
-                <img src={case1.img_url} alt="공장이미지" />
-              </ImgBox>
-              <ComIntro>
-                <h3>{case1.company}</h3>
-                <p>솔루션: 비즈니스명</p>
-              </ComIntro>
-            </li>
-          ))}
-        </Company>
+        {year_2022.length > 0 ? (
+          <Company>
+            {year_2022.map((item) => (
+              <li>
+                <ImgBox>
+                  <img src={item.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{item.company}</h3>
+                  <p>{item.bs_title} 사례</p>
+                  <p>{item.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          <p style={{ marginTop: "50px", color: "#777" }}>
+            2023년도에 해당하는 사례가 없습니다.
+          </p>
+        )}
+
+        {/* --------------------------------------------------------------- */}
+        <h2>2023년</h2>
+
+        {year_2023.length > 0 ? (
+          <Company>
+            {year_2023.map((year_2023) => (
+              <li>
+                <ImgBox>
+                  <img src={year_2023.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{year_2023.company}</h3>
+                  <p>{year_2023.bs_title} 사례</p>
+                  <p>{year_2023.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          <p style={{ marginTop: "50px", color: "#777" }}>
+            2023년도에 해당하는 사례가 없습니다.
+          </p>
+        )}
+
+        {/* --------------------------------------------------------------- */}
+        <h2>2024년</h2>
+
+        {year_2024.length > 0 ? (
+          <Company>
+            {year_2024.map((year_2024) => (
+              <li>
+                <ImgBox>
+                  <img src={year_2024.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{year_2024.company}</h3>
+                  <p>{year_2024.bs_title} 사례</p>
+                  <p>{year_2024.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          <p style={{ marginTop: "50px", color: "#777" }}>
+            2023년도에 해당하는 사례가 없습니다.
+          </p>
+        )}
+
+        {/* --------------------------------------------------------------- */}
+        <h2>2025년</h2>
+
+        {year_2025.length > 0 ? (
+          <Company>
+            {year_2025.map((year_2025) => (
+              <li>
+                <ImgBox>
+                  <img src={year_2025.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{year_2025.company}</h3>
+                  <p>{year_2025.bs_title} 사례</p>
+                  <p>{year_2025.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          <p style={{ marginTop: "50px", color: "#777" }}>
+            2023년도에 해당하는 사례가 없습니다.
+          </p>
+        )}
       </FemsContainer>
     </Container>
   );
 };
-
-// case 페이지를 하나로 끝낼 수 있을지 아니면 여러개로 나눠서 해야하는지 모르겠음
-// useState 를 나는 보통 true false 로 많이 만들어서 썻는데, 안에 문자열도 충분히 들어가서 사용할 수 있다고 기억을 해야함
-// 이렇게 적용시킨걸 통으로 그냥 외워버리면 다음에 기억에 의존해서 바로 자동으로 사용가능할 수 있겠다.
-// 그 밑에부터 어떻게 적용시켜야할지를 모르겠는데 진심으로
-// 나도 집중을 하고 싶은데 어떻게 하면 집중을 할 수 있을까
