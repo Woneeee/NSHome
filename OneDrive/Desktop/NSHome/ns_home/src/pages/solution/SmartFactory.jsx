@@ -2,6 +2,7 @@ import styled from "styled-components";
 import nixpack_bg from "../../img/nixpack_bg.jpeg";
 import { useState } from "react";
 import smartfactory from "../../img/smartfactory.jpeg";
+import { Link } from "react-router-dom";
 
 const Container = styled.section`
   width: 100%;
@@ -178,7 +179,9 @@ export const SmartFactory = () => {
       <Banner>
         <h1>스마트팩토리구축지원</h1>
 
-        <CaseBtn>고객사례 확인하기</CaseBtn>
+        <CaseBtn>
+          <Link to={"/case/스마트생태공장"}>고객사례 확인하기</Link>
+        </CaseBtn>
       </Banner>
 
       <NixIntro>

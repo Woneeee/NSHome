@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import main from "../../../img/main2.jpeg";
+import main_bg from "../../../img/main_bg.jpeg";
+import main_bg2 from "../../../img/main_bg2.jpeg";
 
 const fadeInAndScale = keyframes`
   0% {
@@ -48,7 +49,7 @@ const Text = styled.div`
 export const MainBanner = () => {
   return (
     <Container>
-      <img src={main} alt="main" />
+      <img src={main_bg} alt="main" />
 
       <Text>
         <h2>에너지 효율화를 통해</h2>

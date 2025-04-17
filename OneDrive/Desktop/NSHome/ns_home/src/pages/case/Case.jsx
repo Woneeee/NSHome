@@ -159,7 +159,7 @@ export const Case = () => {
           </Company>
         ) : (
           <p style={{ marginTop: "50px", color: "#777" }}>
-            2023년도에 해당하는 사례가 없습니다.
+            2022년도에 해당하는 사례가 없습니다.
           </p>
         )}
 
@@ -207,7 +207,7 @@ export const Case = () => {
           </Company>
         ) : (
           <p style={{ marginTop: "50px", color: "#777" }}>
-            2023년도에 해당하는 사례가 없습니다.
+            2024년도에 해당하는 사례가 없습니다.
           </p>
         )}
 
@@ -231,7 +231,7 @@ export const Case = () => {
           </Company>
         ) : (
           <p style={{ marginTop: "50px", color: "#777" }}>
-            2023년도에 해당하는 사례가 없습니다.
+            2025년도에 해당하는 사례가 없습니다.
           </p>
         )}
       </FemsContainer>

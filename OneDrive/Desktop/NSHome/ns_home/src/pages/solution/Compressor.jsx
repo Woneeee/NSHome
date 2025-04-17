@@ -2,6 +2,7 @@ import styled from "styled-components";
 import nixpack_bg from "../../img/nixpack_bg.jpeg";
 import compressor from "../../img/compressor.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Container = styled.section`
   width: 100%;
@@ -178,7 +179,9 @@ export const Compressor = () => {
       <Banner>
         <h1>공기압축기통합제어시스템</h1>
 
-        <CaseBtn>고객사례 확인하기</CaseBtn>
+        <CaseBtn>
+          <Link to={"/case/공기압축기통합제어시스템"}>고객사례 확인하기</Link>
+        </CaseBtn>
       </Banner>
 
       <NixIntro>

@@ -42,9 +42,6 @@ const Menu = styled.ul`
   li:nth-child(5) {
     margin: 0;
   }
-  a {
-    color: ${(props) => (props.$home ? "white" : "black")};
-  }
 
   .dropdown {
     position: absolute;
@@ -53,7 +50,7 @@ const Menu = styled.ul`
     margin-top: 43px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(44, 44, 44, 0.2);
-    //rgba 색상 조절하기
+
     li {
       font-size: 17px;
       font-weight: 400;
@@ -110,6 +107,8 @@ const Close = styled.div`
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null); // 활성화된 메뉴 상태 관리
   const [activeModal, setActiveModal] = useState(false);
+  const path = useLocation();
+  const [isHome, setIsHome] = useState(false);
 
   const mouseEnterHandler = (menu) => {
     setActiveMenu(menu);
@@ -123,8 +122,6 @@ export const Header = () => {
   const closeHandler = () => {
     setActiveModal(false);
   };
-  const path = useLocation();
-  const [isHome, setIsHome] = useState(false);
 
   useEffect(() => {
     if (path.pathname === "/") {
@@ -132,14 +129,15 @@ export const Header = () => {
     } else {
       setIsHome(false); // 홈이 아닐때는 flase
     }
-    console.log(path.pathname);
   }, [path.pathname]);
-  // 해보고 안되면은 그냥 지우면 됨
-
-  console.log(isHome);
 
   return (
-    <SHeader>
+    <SHeader
+      style={{
+        backgroundColor: isHome ? "transparent" : "white",
+        color: isHome ? "#fff" : "#000",
+      }}
+    >
       <Logo>
         <Link to={"/"}>
           <img src={logo} alt="logo" />
@@ -151,7 +149,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("aboutus")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link to={"/company"} $home={isHome}>
+          <Link to={"/company"} style={{ color: isHome ? "#fff" : "#000" }}>
             ABOUT US
           </Link>
           {activeMenu === "aboutus" && (
@@ -175,7 +173,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("business")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome} to={"/software"}>
+          <Link to={"/software"} style={{ color: isHome ? "#fff" : "#000" }}>
             BUSINESS
           </Link>
           {activeMenu === "business" && (
@@ -196,7 +194,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("solutions")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome} to={"/nixpack"}>
+          <Link to={"/nixpack"} style={{ color: isHome ? "#fff" : "#000" }}>
             SOLUTIONS
           </Link>
           {activeMenu === "solutions" && (
@@ -217,7 +215,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("cases")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome} to={"/case/FEMS"}>
+          <Link to={"/case/FEMS"} style={{ color: isHome ? "#fff" : "#000" }}>
             CASES
           </Link>
           {activeMenu === "cases" && (
@@ -232,7 +230,7 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("notice")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link $home={isHome}>NOTICE</Link>
+          <Link style={{ color: isHome ? "#fff" : "#000" }}>NOTICE</Link>
           {activeMenu === "notice" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
@@ -259,3 +257,8 @@ export const Header = () => {
     </SHeader>
   );
 };
+
+// 헤더 부분에서 해야할 것 :
+// 상세 페이지로 들어오면 헤더 색상이 투명 > 흰색으로 바뀌어야함
+// 먼저, home 이면 메뉴 색상이 없음으로 바뀌던지
+// home 이 아니면 메뉴가 색상이 흰색으로 바뀌어야함
