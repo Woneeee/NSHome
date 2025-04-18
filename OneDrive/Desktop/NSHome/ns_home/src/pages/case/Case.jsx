@@ -147,79 +147,7 @@ export const Case = () => {
       </NavWrapper>
 
       <FemsContainer>
-        <h2>~2022년</h2>
-
-        {year_2022.length > 0 ? (
-          <Company>
-            {year_2022.map((item) => (
-              <li>
-                <ImgBox>
-                  <img src={item.img_url} alt="공장이미지" />
-                </ImgBox>
-                <ComIntro>
-                  <h3>{item.company}</h3>
-                  <p>{item.bs_title} 사례</p>
-                  <p>{item.bs_info}</p>
-                </ComIntro>
-              </li>
-            ))}
-          </Company>
-        ) : (
-          <p style={{ marginTop: "50px", color: "#777" }}>
-            2022년도에 해당하는 사례가 없습니다.
-          </p>
-        )}
-
-        {/* --------------------------------------------------------------- */}
-        <h2>2023년</h2>
-
-        {year_2023.length > 0 ? (
-          <Company>
-            {year_2023.map((year_2023) => (
-              <li>
-                <ImgBox>
-                  <img src={year_2023.img_url} alt="공장이미지" />
-                </ImgBox>
-                <ComIntro>
-                  <h3>{year_2023.company}</h3>
-                  <p>{year_2023.bs_title} 사례</p>
-                  <p>{year_2023.bs_info}</p>
-                </ComIntro>
-              </li>
-            ))}
-          </Company>
-        ) : (
-          <p style={{ marginTop: "50px", color: "#777" }}>
-            2023년도에 해당하는 사례가 없습니다.
-          </p>
-        )}
-
-        {/* --------------------------------------------------------------- */}
-        <h2>2024년</h2>
-
-        {year_2024.length > 0 ? (
-          <Company>
-            {year_2024.map((year_2024) => (
-              <li>
-                <ImgBox>
-                  <img src={year_2024.img_url} alt="공장이미지" />
-                </ImgBox>
-                <ComIntro>
-                  <h3>{year_2024.company}</h3>
-                  <p>{year_2024.bs_title} 사례</p>
-                  <p>{year_2024.bs_info}</p>
-                </ComIntro>
-              </li>
-            ))}
-          </Company>
-        ) : (
-          <p style={{ marginTop: "50px", color: "#777" }}>
-            2024년도에 해당하는 사례가 없습니다.
-          </p>
-        )}
-
-        {/* --------------------------------------------------------------- */}
-        <h2>2025년</h2>
+        {year_2025.length > 0 ? <h2>2025년</h2> : ""}
 
         {year_2025.length > 0 ? (
           <Company>
@@ -237,9 +165,70 @@ export const Case = () => {
             ))}
           </Company>
         ) : (
-          <p style={{ marginTop: "50px", color: "#777" }}>
-            2025년도에 해당하는 사례가 없습니다.
-          </p>
+          ""
+        )}
+        {/* --------------------------------------------------------------- */}
+        {year_2024.length > 0 ? <h2>2024년</h2> : ""}
+
+        {year_2024.length > 0 ? (
+          <Company>
+            {year_2024.map((year_2024) => (
+              <li>
+                <ImgBox>
+                  <img src={year_2024.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{year_2024.company}</h3>
+                  <p>{year_2024.bs_title} 사례</p>
+                  <p>{year_2024.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          ""
+        )}
+        {/* --------------------------------------------------------------- */}
+        {year_2023.length > 0 ? <h2>2023년</h2> : ""}
+
+        {year_2023.length > 0 ? (
+          <Company>
+            {year_2023.map((year_2023) => (
+              <li>
+                <ImgBox>
+                  <img src={year_2023.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{year_2023.company}</h3>
+                  <p>{year_2023.bs_title} 사례</p>
+                  <p>{year_2023.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          ""
+        )}
+        {/* ------------------------------------------------------------ */}
+        {year_2022.length > 0 ? <h2>~2022년</h2> : ""}
+
+        {year_2022.length > 0 ? (
+          <Company>
+            {year_2022.map((item) => (
+              <li>
+                <ImgBox>
+                  <img src={item.img_url} alt="공장이미지" />
+                </ImgBox>
+                <ComIntro>
+                  <h3>{item.company}</h3>
+                  <p>{item.bs_title} 사례</p>
+                  <p>{item.bs_info}</p>
+                </ComIntro>
+              </li>
+            ))}
+          </Company>
+        ) : (
+          ""
         )}
       </FemsContainer>
     </Container>
