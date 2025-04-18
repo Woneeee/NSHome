@@ -27,7 +27,6 @@ const Bg = styled.div`
   width: 100%;
   height: 100%;
   background-color: #18181873;
-  z-index: 99;
 `;
 
 const SoftText = styled.div`
@@ -55,8 +54,6 @@ const GovernIntro = styled.section`
   max-width: 1140px;
   width: 100%;
   margin: 120px auto;
-  /* margin-top: 120px; */
-  /* background-color: lavender; */
   h2 {
     font-size: 45px;
     font-weight: 500;
@@ -79,7 +76,6 @@ const GovernIntro = styled.section`
     opacity: 0.7;
     letter-spacing: -1px;
     text-align: center;
-    /* background-color: pink; */
   }
 `;
 
