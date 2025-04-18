@@ -14,7 +14,6 @@ export const GlobalStyled = createGlobalStyle`
         /* outline: 1px solid red; */
     } 
 
-
     body,
     h1,
     h2,

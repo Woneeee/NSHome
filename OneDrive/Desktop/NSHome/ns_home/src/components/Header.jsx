@@ -45,14 +45,13 @@ const Menu = styled.ul`
 
   .dropdown {
     position: absolute;
-    width: 200px;
+    width: 210px;
     background-color: rgb(255, 255, 255);
     margin-top: 43px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(44, 44, 44, 0.2);
-
     li {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 400;
       width: 100%;
       height: 60px;
@@ -62,6 +61,43 @@ const Menu = styled.ul`
     }
     a {
       color: rgb(51, 51, 51);
+    }
+  }
+`;
+
+const MegaMenuWrapper = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 700px;
+  background-color: white;
+  padding: 30px 60px;
+  display: ${({ $visible }) => ($visible ? "flex" : "none")};
+  justify-content: space-around;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-radius: 10px;
+`;
+
+const MegaMenuColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  a {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
     }
   }
 `;
@@ -155,7 +191,7 @@ export const Header = () => {
           {activeMenu === "aboutus" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/company"}>회사소개</Link>
+                <Link to={"/software"}>회사소개</Link>
               </li>
               <li>
                 <Link to={"/vision"}>VISION</Link>
@@ -230,11 +266,13 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("notice")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link style={{ color: isHome ? "#fff" : "#000" }}>NOTICE</Link>
+          <Link to={"/request"} style={{ color: isHome ? "#fff" : "#000" }}>
+            NOTICE
+          </Link>
           {activeMenu === "notice" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/company"}>문의하기</Link>
+                <Link to={"/request"}>고객 문의</Link>
               </li>
             </ul>
           )}
@@ -257,8 +295,3 @@ export const Header = () => {
     </SHeader>
   );
 };
-
-// 헤더 부분에서 해야할 것 :
-// 상세 페이지로 들어오면 헤더 색상이 투명 > 흰색으로 바뀌어야함
-// 먼저, home 이면 메뉴 색상이 없음으로 바뀌던지
-// home 이 아니면 메뉴가 색상이 흰색으로 바뀌어야함

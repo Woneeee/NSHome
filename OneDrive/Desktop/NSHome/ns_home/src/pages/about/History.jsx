@@ -21,7 +21,15 @@ const Bg = styled.section`
   background-position: center;
 `;
 
+const ImgBg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e4e4e421;
+`;
+
 const Text = styled.div`
+  position: absolute;
   h1 {
     font-size: 55px;
     font-weight: 500;
@@ -97,7 +105,7 @@ const His = styled.ul`
   }
   li {
     width: 750px;
-    border-top: 2px solid #333333;
+    border-top: 1px solid #2c2c2c2e;
     padding: 25px 0;
     padding-left: 15px;
   }
@@ -141,6 +149,9 @@ const ImgBox = styled.div`
   border: 1px solid #5f5f5f32;
   padding: 1px;
   border-radius: 5px;
+  &:hover {
+    transform: scale(1.7);
+  }
   img {
     width: 100%;
     height: 100%;
@@ -166,6 +177,7 @@ export const History = () => {
   return (
     <Container>
       <Bg>
+        <ImgBg />
         <Text>
           <h1>연혁 및 인증</h1>
         </Text>

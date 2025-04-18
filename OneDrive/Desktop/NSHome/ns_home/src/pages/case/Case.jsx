@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import factory from "../../img/factory.jpeg";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { case1, case2, case3, case4 } from "../../config/case/case";
 
 const Container = styled.section`
@@ -23,6 +23,7 @@ const Bg = styled.section`
     font-size: 55px;
     font-weight: 500;
     letter-spacing: -1px;
+    position: absolute;
   }
 `;
 
@@ -30,7 +31,7 @@ const ImgBg = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #e2e2e217;
+  background-color: #e2e2e23a;
 `;
 
 const NavWrapper = styled.nav`

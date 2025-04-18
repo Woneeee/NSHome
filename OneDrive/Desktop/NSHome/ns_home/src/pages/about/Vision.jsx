@@ -18,7 +18,15 @@ const Bg = styled.section`
   align-items: center;
 `;
 
+const ImgBg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e4e4e421;
+`;
+
 const Text = styled.div`
+  position: absolute;
   h1 {
     font-size: 55px;
     font-weight: 500;
@@ -84,6 +92,7 @@ export const Vision = () => {
   return (
     <Container>
       <Bg>
+        <ImgBg />
         <Text>
           <h1>VISION</h1>
         </Text>
