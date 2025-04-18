@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import request_bg from "../../img/request_bg.jpeg";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 
 const Container = styled.section`
   width: 100%;
@@ -28,15 +27,16 @@ const ImgBg = styled.div`
 `;
 
 const Form = styled.form`
-  padding: 50px 10px;
+  padding: 50px 20px;
   max-width: 500px;
   width: 100%;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  background-color: #cdcdcdb1;
+  background-color: #ffffffea;
   backdrop-filter: blur(5px);
   margin: 150px 0 50px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   h1 {
     font-size: 55px;
     font-weight: 500;
@@ -55,7 +55,7 @@ const Form = styled.form`
   }
   h4 {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 17px;
   }
   span {
@@ -67,7 +67,7 @@ const Form = styled.form`
     height: 40px;
     border: 1px solid #55555530;
     margin-top: 4px;
-    border-radius: 13px;
+    border-radius: 8px;
     padding: 0 10px;
     box-sizing: border-box;
     font-size: 14px;
@@ -79,7 +79,7 @@ const Form = styled.form`
     height: 250px;
     border: 1px solid #55555530;
     margin-top: 4px;
-    border-radius: 13px;
+    border-radius: 8px;
     padding: 10px;
     resize: none;
     font-size: 14px;
@@ -106,6 +106,8 @@ const Btn = styled.button`
   cursor: pointer;
   color: #fff;
   font-weight: 300;
+  &:hover {
+  }
 `;
 
 export const Request = () => {
