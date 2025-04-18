@@ -57,7 +57,6 @@ const NavItem = styled.div`
 const FemsContainer = styled.section`
   max-width: 1140px;
   width: 100%;
-  /* background-color: pink; */
   margin: 0 auto;
   h2 {
     font-size: 35px;
@@ -69,7 +68,6 @@ const FemsContainer = styled.section`
 
 const Company = styled.ul`
   width: 100%;
-  /* background-color: violet; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
@@ -77,7 +75,6 @@ const Company = styled.ul`
   margin-top: 50px;
   li {
     border-radius: 15px;
-    /* background-color: lavender; */
     transition-duration: 0.2s;
     cursor: pointer;
     &:hover {

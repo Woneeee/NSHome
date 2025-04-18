@@ -8,7 +8,6 @@ const Container = styled.section`
 const Bg = styled.div`
   width: 100%;
   height: 450px;
-  background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,3 +41,7 @@ export const Request = () => {
     </Container>
   );
 };
+
+//년도를 최신순
+//큰 회사를 앞으로 땡기고
+//해당사례가 없는 년도는 없애기
