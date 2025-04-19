@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import nixpack_bg from "../../img/nixpack_bg.jpeg";
 import compressor from "../../img/compressor.png";
 import { useState } from "react";
@@ -49,8 +49,19 @@ const NixIntro = styled.section`
   margin-top: 120px;
 `;
 
+const fadeInAndScale = keyframes`
+  0%{
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100%{
+    
+  }
+`;
+
 const NixImg = styled.div`
   height: 500px;
+  animation: ${fadeInAndScale} 1s ease-in-out;
   img {
     width: 100%;
     height: 100%;
