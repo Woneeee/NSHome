@@ -65,24 +65,25 @@ const Form = styled.form`
     all: unset;
     width: 100%;
     height: 40px;
-    border: 1px solid #55555530;
+    border: 1px solid #fff;
     margin-top: 4px;
     border-radius: 8px;
     padding: 0 10px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 15px;
   }
   textarea {
     all: unset;
-    display: block;
+    /* display: block; */
     width: 100%;
     height: 250px;
-    border: 1px solid #55555530;
+    border: 1px solid #00000063;
     margin-top: 4px;
     border-radius: 8px;
     padding: 10px;
     resize: none;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 20px;
     box-sizing: border-box;
     white-space: pre-wrap;
     overflow-wrap: break-word;
@@ -100,13 +101,17 @@ const ErrorMessage = styled.div`
 const Btn = styled.button`
   margin-top: 40px;
   width: 100%;
-  height: 50px;
-  background-color: #0a0a539b;
-  border-radius: 13px;
+  height: 40px;
+  border: 1px solid #5555555d;
+  border-radius: 8px;
   cursor: pointer;
-  color: #fff;
   font-weight: 300;
   &:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 0.084) 100%
+    );
   }
 `;
 
@@ -125,7 +130,7 @@ export const Request = () => {
         <ImgBg />
 
         <Form onSubmit={handleSubmit(requestHandler)}>
-          <h1>고객 문의</h1>
+          <h1>도입 문의</h1>
           <p>
             상황을 구체적으로 말씀해주시면, 적합한 상담과 제안을 드리겠습니다.
           </p>
@@ -138,7 +143,7 @@ export const Request = () => {
               required: "답변을 입력해주세요",
             })}
             type="text"
-            style={{ borderColor: errors?.name ? "red" : "#00000027" }}
+            style={{ borderColor: errors?.name ? "red" : "#00000063" }}
           />
           <ErrorMessage>{errors?.name?.message}</ErrorMessage>
 
@@ -150,7 +155,7 @@ export const Request = () => {
               required: "답변을 입력해주세요",
             })}
             type="text"
-            style={{ borderColor: errors?.company ? "red" : "#00000027" }}
+            style={{ borderColor: errors?.company ? "red" : "#00000063" }}
           />
           <ErrorMessage>{errors?.company?.message}</ErrorMessage>
 
@@ -162,7 +167,7 @@ export const Request = () => {
               required: "답변을 입력해주세요",
             })}
             type="tel"
-            style={{ borderColor: errors?.contact ? "red" : "#00000027" }}
+            style={{ borderColor: errors?.contact ? "red" : "#00000063" }}
           />
           <ErrorMessage>{errors?.contact?.message}</ErrorMessage>
 
@@ -174,7 +179,7 @@ export const Request = () => {
               required: "답변을 입력해주세요",
             })}
             type="text"
-            style={{ borderColor: errors?.email ? "red" : "#00000027" }}
+            style={{ borderColor: errors?.email ? "red" : "#00000063" }}
           />
           <ErrorMessage>{errors?.email?.message}</ErrorMessage>
 
@@ -187,7 +192,7 @@ export const Request = () => {
               required: "답변을 입력해주세요",
             })}
             type="text"
-            style={{ borderColor: errors?.contents ? "red" : "#00000027" }}
+            style={{ borderColor: errors?.contents ? "red" : "#00000063" }}
           />
           <ErrorMessage>{errors?.contents?.message}</ErrorMessage>
 

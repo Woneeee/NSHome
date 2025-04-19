@@ -58,6 +58,7 @@ const FemsContainer = styled.section`
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 120px;
   h2 {
     font-size: 35px;
     font-weight: 500;
@@ -131,7 +132,7 @@ export const Case = () => {
     <Container>
       <Bg>
         <ImgBg />
-        <h1>고객 사례</h1>
+        <h1>구축 사례</h1>
       </Bg>
 
       <NavWrapper>

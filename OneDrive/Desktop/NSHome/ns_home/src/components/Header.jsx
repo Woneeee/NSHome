@@ -257,7 +257,7 @@ export const Header = () => {
           {activeMenu === "cases" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/case/FEMS"}>고객 사례</Link>
+                <Link to={"/case/FEMS"}>구축 사례</Link>
               </li>
             </ul>
           )}
@@ -272,7 +272,7 @@ export const Header = () => {
           {activeMenu === "notice" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/request"}>고객 문의</Link>
+                <Link to={"/request"}>도입 문의</Link>
               </li>
             </ul>
           )}

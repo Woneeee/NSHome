@@ -38,7 +38,6 @@ const BriefVision = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: pink; */
   padding: 120px 0;
   h2 {
     width: 600px;
@@ -52,6 +51,7 @@ const BriefVision = styled.section`
 
 const VisionCon = styled.section`
   width: 100%;
+  height: 550px;
   background-image: url(${vision_bg});
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,14 +60,16 @@ const VisionCon = styled.section`
   justify-content: center;
   align-items: center;
   padding: 120px 0;
+  position: relative;
+  margin-bottom: 120px;
 `;
 
 const VisionText = styled.div`
-  /* background-color: darkgray; */
   max-width: 700px;
   width: 100%;
   color: #fff;
   text-align: center;
+  position: absolute;
   h2 {
     font-size: 35px;
     font-weight: 500;
@@ -88,6 +90,13 @@ const Eng = styled.div`
   font-weight: 300;
 `;
 
+const ImgBg_2 = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1b1b5f;
+`;
+
 export const Vision = () => {
   return (
     <Container>
@@ -103,6 +112,7 @@ export const Vision = () => {
       </BriefVision>
 
       <VisionCon>
+        <ImgBg_2 />
         <VisionText>
           <h2>VISION</h2>
           <p>
