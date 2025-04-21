@@ -14,7 +14,7 @@ import { Nixpack } from "./pages/solution/Nixpack";
 import { Compressor } from "./pages/solution/Compressor";
 import { SmartFactory } from "./pages/solution/SmartFactory";
 import { Case } from "./pages/case/Case";
-import { Request } from "./pages/notice/Request";
+import { Inquery } from "./pages/notice/Inquery";
 
 const Router = () => {
   return (
@@ -33,7 +33,7 @@ const Router = () => {
         <Route path={routes.compressor} element={<Compressor />}></Route>
         <Route path={routes.smartfactory} element={<SmartFactory />}></Route>
         <Route path={routes.case} element={<Case />}></Route>
-        <Route path={routes.request} element={<Request />}></Route>
+        <Route path={routes.inquery} element={<Inquery />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -115,7 +115,7 @@ const Btn = styled.button`
   }
 `;
 
-export const Request = () => {
+export const Inquery = () => {
   const {
     register,
     handleSubmit,
@@ -202,5 +202,3 @@ export const Request = () => {
     </Container>
   );
 };
-
-//
