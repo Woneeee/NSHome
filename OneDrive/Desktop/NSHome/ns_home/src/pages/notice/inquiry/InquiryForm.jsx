@@ -74,7 +74,6 @@ const Form = styled.form`
   }
   textarea {
     all: unset;
-    /* display: block; */
     width: 100%;
     height: 250px;
     border: 1px solid #00000063;
@@ -115,7 +114,7 @@ const Btn = styled.button`
   }
 `;
 
-export const Inquery = () => {
+export const InquiryForm = () => {
   const {
     register,
     handleSubmit,

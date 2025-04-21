@@ -266,13 +266,13 @@ export const Header = () => {
           onMouseEnter={() => mouseEnterHandler("notice")}
           // onMouseLeave={mouseLeaveHandler}
         >
-          <Link to={"/inquery"} style={{ color: isHome ? "#fff" : "#000" }}>
+          <Link to={"/inquiryform"} style={{ color: isHome ? "#fff" : "#000" }}>
             NOTICE
           </Link>
           {activeMenu === "notice" && (
             <ul className="dropdown" onMouseLeave={mouseLeaveHandler}>
               <li>
-                <Link to={"/inquery"}>도입 문의</Link>
+                <Link to={"/inquiryform"}>도입 문의</Link>
               </li>
             </ul>
           )}

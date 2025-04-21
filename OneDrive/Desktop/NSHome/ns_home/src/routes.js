@@ -11,5 +11,5 @@ export const routes = {
   compressor: "/compressor",
   smartfactory: "/smartfactory",
   case: "/case/:id",
-  inquery: "/inquery",
+  inquiryform: "/inquiryform",
 };
